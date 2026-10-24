@@ -1,28 +1,26 @@
-# level-time-watch
+---
+generated_by: "OpenAI Codex (GPT-6; exact variant not exposed)"
+timestamp: "2026-10-24T15:11:39-05:00"
+---
+# Level Time
 
-Scaffolded from `project-template` using the `workflow-python` profile.
+A Pebble Time 2 watchface concept: the watch rolls with your wrist while the digital time counter-rotates so its digits stay level. The time remains flat, legible 2D text on the watch screen. The watchface does not draw a floating card or project a hologram.
 
-## Project Profile
+This repository is a **project and design brief**, not a built watchface yet. The native Pebble implementation and settings screen are the next milestone.
 
-- `profile`: `workflow-python`
-- `deploy`: `local-only`
-- `runtime`: `pebble-sdk`
-- `loop_mode`: `data`
-- `knowledge_level`: `heavy`
+## Six settings styles
 
-## Workshop Standard
+The planned **Appearance → Style** selector includes all six accepted looks. Ink is the default.
 
-This project follows the 3-layer architecture:
+| Style | Display | Time | Supporting detail |
+| --- | --- | --- | --- |
+| [Ink](design/renders/ink.png) | Black | White | Small gray date |
+| [Paper](design/renders/paper.png) | Warm ivory | Charcoal | Small dark date |
+| [Amber](design/renders/amber.png) | Black | Amber | Small battery indicator |
+| [Field](design/renders/field.png) | Dark olive | Off-white | Small pale date |
+| [Signal](design/renders/signal.png) | Black | White | Orange accent dot and date |
+| [Quiet](design/renders/quiet.png) | Light gray | Charcoal | Small gray date |
 
-```text
-directives/     Layer 1 — What to do
-agent           Layer 2 — Decide → Delegate → Verify
-execution/      Layer 3 — Deterministic execution (when this profile uses it)
-```
+The reference renders show each style at three watch angles. Their colors and layouts are design targets; they are not emulator captures or proof of final Pebble pixels.
 
-## Next Steps
-
-1. Fill in the actual project description here.
-2. Update `task.md` with the first real milestone.
-3. Populate `knowledge/context.md`.
-4. Draft the first workflow directive in `directives/`.
+See [the design brief](docs/DESIGN.md) for the motion rule, settings contract, and implementation limits. See [task.md](task.md) for the current milestone.

@@ -2,19 +2,24 @@
 
 ## Identity
 
-- Name: `level-time-watch`
-- Profile: `workflow-python`
-- Deploy: `local-only`
-- Runtime: `pebble-sdk`
+- Product name: Level Time.
+- Local repository: `level-time-watch`.
+- Initial watch target: Pebble Time 2 (`emery`, 200 × 228).
+- Scaffold profile: `workflow-python`; runtime: Pebble SDK. This profile supplies project governance and future deterministic checks, not a Python watchface runtime.
+- Deployment state: local project only.
 
 ## Purpose
 
-Describe who this project serves and what use, purpose, or beauty it should deliver.
+Keep the clock easy to read when the wrist rolls. The user-supplied orientation diagram fixes the essential relationship: watch and screen rotate; 2D digits stay level. The six approved no-blue render styles are settings presets, not separate watchfaces.
 
 ## Constraints
 
-- Add real constraints here
+- Accelerometer data estimates orientation relative to gravity; it does not locate the viewer's eyes.
+- Near-horizontal wrist positions have an ambiguous in-plane gravity direction.
+- The screen uses Pebble's finite pixel and color palette, so image-generation renders are direction rather than pixel evidence.
+- Physical-watch battery and readability remain separate checks after native implementation.
 
-## Out of Scope
+## Current state
 
-- Add out-of-scope boundaries here
+- Project scaffold, design brief, reference diagram, and six renders exist locally.
+- Native watchface source and settings implementation have not started.
