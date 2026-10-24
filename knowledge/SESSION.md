@@ -29,3 +29,4 @@
 ## Checkpoint Log
 
 - 2026-10-24 15:15 — commit: Define Level Time watchface project and six style presets | README.md,design/reference-orientation.png,design/renders/amber.png,design/renders/field.png,design/renders/ink.png
+- 2026-10-24 15:55 — commit: Build and publish Level Time watchface 0.1.0 | README.md,directives/build_watchface.md,execution/capture_media.py,execution/create_promo_gif.py,knowledge/DECISIONS.md
