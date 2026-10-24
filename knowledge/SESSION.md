@@ -2,14 +2,17 @@
 
 ## Current Session
 
-**Goal:** Build the Emery watchface, capture native stills and a tilt GIF, and publish the PBW to the watchface store.
+**Goal:** Add theme coverage to the published Emery screenshot gallery while keeping the tilt GIF first.
 **Agent:** OpenAI Codex
 **Handoff-from:** OpenAI Codex
 **Handoff-type:** continuation
-**Status:** Complete — version 0.1.0 published
+**Status:** Complete — six themes represented in live gallery
 
 ## Checkpoints
 
+- 2026-10-24 16:41 — The public listing HTML references the original tilt GIF in slot 1 and the new theme GIF in slot 2, followed by Paper, Amber, and Quiet. The public GIF asset downloaded successfully at 200 × 228, six frames, and 6,072 bytes, matching the local file size. The in-app browser retained the older client-side gallery cache during the check; the saved dashboard gallery and public HTML both show the new order.
+- 2026-10-24 16:39 — Created a six-frame 200 × 228 theme GIF from native PNG captures, with exact pixel matches and 1.5-second frames. The Developer Dashboard now stores it in slot 2 after the original tilt GIF, followed by Paper, Amber, and Quiet stills. The public app page still showed cached old media immediately after saving; recheck propagation before closing.
+- 2026-10-24 — User requested more theme screenshots. The official submission guide limits Emery to five 200 × 228 images. Plan: preserve the first tilt GIF; replace one gallery image with a native GIF that cycles all six themes, then verify the public order and animation.
 - 2026-10-24 15:55 — Pebble CLI created the public [Level Time listing](https://apps.repebble.com/450af5416e634355b0e326f9) as Listed; release 0.1.0 is Published for Emery. The public gallery has the 13-frame native GIF first and four native style PNGs. The dashboard saved a 720 × 320 banner, converting the GIF upload to PNG; the current public page does not display the banner.
 - 2026-10-24 15:53 — Independent read-only verifier passed the PBW, source motion, six style captures, and first GIF. Host C test, PBW metadata/media checks, and `git diff --check` passed. Phone settings Save and physical-watch battery/readability remain unmeasured.
 - 2026-10-24 15:50 — Captured six native Emery stills and a 13-frame GIF that opens upright, rolls both directions, and returns upright. Built an 11-frame illustrated promo banner from those native frames.

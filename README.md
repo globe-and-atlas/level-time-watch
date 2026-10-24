@@ -29,7 +29,7 @@ The reference renders show each style at three watch angles. Their colors and la
 
 The [six native screenshots](media/native/) are captured from the Emery emulator. The [animated store banner](media/store/emery_banner.gif) places those native display frames in an illustrated rotating case. It is promotional artwork, not a photo of a physical watch.
 
-[Level Time is published in the Pebble watchface store](https://apps.repebble.com/450af5416e634355b0e326f9). Version 0.1.0 is listed for Pebble Time 2, with the native tilt GIF first in its five-image gallery. The developer dashboard accepted the banner but stored it as a static PNG.
+[Level Time is published in the Pebble watchface store](https://apps.repebble.com/450af5416e634355b0e326f9). Version 0.1.0 is listed for Pebble Time 2. The gallery starts with the native tilt GIF, then a [six-style GIF](media/store/emery_01_six_styles.gif), followed by Paper, Amber, and Quiet stills. The developer dashboard accepted the banner but stored it as a static PNG.
 
 ## Build
 

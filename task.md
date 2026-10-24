@@ -49,3 +49,25 @@ timestamp: "2026-10-24T15:11:39-05:00"
 
 ## Previous milestone
 The dedicated repository and design brief were created in commit `f6c0991`.
+
+## Theme gallery update — 2026-10-24
+
+The Emery store gallery permits five images. Keep the original tilt GIF first while using another slot to show every selectable theme.
+
+### Acceptance
+
+- The first store image remains the native tilt GIF.
+- A second 200 × 228 GIF cycles through Ink.
+- The second GIF cycles through Paper.
+- The second GIF cycles through Amber.
+- The second GIF cycles through Field.
+- The second GIF cycles through Signal.
+- The second GIF cycles through Quiet.
+- The live listing retains five media items.
+- The updated public listing shows the theme GIF.
+
+### Progress
+
+- [x] Create the native theme GIF.
+- [x] Update the store gallery.
+- [x] Verify the public listing.
