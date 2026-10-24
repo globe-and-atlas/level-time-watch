@@ -33,3 +33,4 @@
 
 - 2026-10-24 15:15 — commit: Define Level Time watchface project and six style presets | README.md,design/reference-orientation.png,design/renders/amber.png,design/renders/field.png,design/renders/ink.png
 - 2026-10-24 15:55 — commit: Build and publish Level Time watchface 0.1.0 | README.md,directives/build_watchface.md,execution/capture_media.py,execution/create_promo_gif.py,knowledge/DECISIONS.md
+- 2026-10-24 16:41 — commit: Show all Level Time themes in store gallery | README.md,knowledge/INDEX.md,knowledge/SESSION.md,knowledge/domain/store_gallery.md,media/store/emery_01_six_styles.gif
