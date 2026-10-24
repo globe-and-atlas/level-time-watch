@@ -1,0 +1,26 @@
+{
+  "name": "level-time-watch",
+  "author": "Daniel Bally",
+  "version": "0.1.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {"@rebble/clay": "1.1.0"},
+  "pebble": {
+    "displayName": "Level Time",
+    "uuid": "3e6d0ef1-6df4-4ec1-820f-b8a0ce5af1f2",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": ["emery"],
+    "watchapp": {
+      "watchface": true
+    },
+    "capabilities": ["configurable"],
+    "messageKeys": [
+      "SETTING_STYLE",
+      "SETTING_DATE"
+    ],
+    "resources": {
+      "media": []
+    }
+  }
+}

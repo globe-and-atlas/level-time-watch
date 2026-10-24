@@ -1,0 +1,1 @@
+Initial Pebble Time 2 release: flat time that counter-rotates as the watch rolls, six selectable styles, date formats, 12/24-hour support, and an Amber battery indicator.

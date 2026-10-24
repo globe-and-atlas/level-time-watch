@@ -23,9 +23,10 @@ Create a native Pebble Time 2 watchface whose on-screen time remains level as th
 4. Expose the style choice in the Pebble phone settings page.
 5. Offer the required date formats.
 6. Build for Emery and verify the bundle target.
-7. Capture native emulator frames at left, neutral, and right roll.
-8. Compare digit baselines against the orientation diagram.
-9. Check motion and battery on a physical watch before release claims.
+7. Run `python3 execution/capture_media.py` to capture native emulator frames at left, neutral, and right roll.
+8. Run `python3 execution/create_promo_gif.py` for an illustrated 720 × 320 banner based on those native frames.
+9. Compare digit baselines against the orientation diagram.
+10. Check motion and battery on a physical watch before making device-tested claims.
 
 ## Edge cases
 
@@ -44,4 +45,5 @@ Create a native Pebble Time 2 watchface whose on-screen time remains level as th
 
 - Keep temporary build and probe output in `.tmp/` when possible.
 - Do not commit `.env`, `.lock-waf*`, tokens, or transient emulator files.
-- Do not publish the PBW or create a remote repository without a later release decision.
+- The user authorized watchface-store publication on 2026-10-24. Keep physical-watch claims separate from emulator evidence.
+- Do not create a remote repository without a separate request.

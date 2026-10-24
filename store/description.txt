@@ -1,0 +1,9 @@
+Level Time keeps the clock easy to read as your Pebble Time 2 rolls with your wrist. The flat digits counter-rotate inside the display, so they stay approximately level instead of tilting with the case.
+
+Choose a look that suits your wrist: Ink, Paper, Amber, Field, Signal, or Quiet. Ink starts with bright white time on black; the other styles span warm paper, amber, olive, and restrained gray. No blue palette is required.
+
+Choose no date or one of three date formats. Level Time follows your watch's 12-hour or 24-hour clock preference. Amber includes a simple battery indicator.
+
+The face uses the watch accelerometer, works without a phone connection, and holds its last stable angle when the watch lies nearly flat.
+
+Made for Pebble Time 2 (Emery).

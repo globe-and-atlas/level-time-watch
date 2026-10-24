@@ -9,7 +9,8 @@ description = "level-time-watch"
 requires-python = ">=3.11"
 dependencies = [
   "python-dotenv>=1.0.0",
-  "requests>=2.32.0"
+  "requests>=2.32.0",
+  "Pillow>=12.3,<13"
 ]
 
 [project.optional-dependencies]
