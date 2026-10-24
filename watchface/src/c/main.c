@@ -18,6 +18,10 @@ typedef struct {
 static Window *s_window;
 static Layer *s_face_layer;
 static GBitmap *s_text_bitmap;
+static GFont s_paper_font;
+static GFont s_amber_font;
+static GFont s_signal_font;
+static GFont s_quiet_font;
 static bool s_bitmap_dirty = true;
 static int s_style = 0;
 static int s_date = 0;
@@ -40,6 +44,17 @@ static Style style_for(int style) {
                            GColorDarkGray, GColorBlack};
     default: return (Style){GColorBlack, GColorWhite,
                             GColorLightGray, GColorWhite};
+  }
+}
+
+static GFont font_for_style(int style) {
+  switch (style) {
+    case 1: return s_paper_font ? s_paper_font : fonts_get_system_font(FONT_KEY_DROID_SERIF_28_BOLD);
+    case 2: return s_amber_font ? s_amber_font : fonts_get_system_font(FONT_KEY_ROBOTO_BOLD_SUBSET_49);
+    case 3: return fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD);
+    case 4: return s_signal_font ? s_signal_font : fonts_get_system_font(FONT_KEY_BITHAM_42_MEDIUM_NUMBERS);
+    case 5: return s_quiet_font ? s_quiet_font : fonts_get_system_font(FONT_KEY_BITHAM_42_LIGHT);
+    default: return fonts_get_system_font(FONT_KEY_LECO_60_BOLD_NUMBERS_AM_PM);
   }
 }
 
@@ -68,9 +83,7 @@ static void capture_text(GContext *ctx, Style palette) {
   graphics_context_set_fill_color(ctx, palette.background);
   graphics_fill_rect(ctx, GRect(0, 0, SOURCE_W, SOURCE_H), 0, GCornerNone);
   graphics_context_set_text_color(ctx, palette.time);
-  GFont time_font = fonts_get_system_font(s_style == 5 ? FONT_KEY_BITHAM_42_LIGHT
-                                                 : FONT_KEY_LECO_60_BOLD_NUMBERS_AM_PM);
-  graphics_draw_text(ctx, s_time_text, time_font,
+  graphics_draw_text(ctx, s_time_text, font_for_style(s_style),
                      GRect(0, 0, SOURCE_W, 62), GTextOverflowModeTrailingEllipsis,
                      GTextAlignmentCenter, NULL);
 
@@ -84,7 +97,7 @@ static void capture_text(GContext *ctx, Style palette) {
   } else {
     if (s_style == 4) {
       graphics_context_set_fill_color(ctx, palette.accent);
-      graphics_fill_circle(ctx, GPoint(42, 70), 3);
+      graphics_fill_circle(ctx, GPoint(30, 70), 3);
     }
     if (s_detail_text[0]) {
       graphics_context_set_text_color(ctx, palette.detail);
@@ -169,6 +182,10 @@ static void init(void) {
   if (s_style < 0 || s_style > 5) s_style = 0;
   s_date = persist_exists(PERSIST_DATE) ? persist_read_int(PERSIST_DATE) : 0;
   if (s_date < 0 || s_date > 3) s_date = 0;
+  s_paper_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PAPER_46));
+  s_amber_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_AMBER_46));
+  s_signal_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SIGNAL_48));
+  s_quiet_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_QUIET_46));
   s_text_bitmap = gbitmap_create_blank(GSize(SOURCE_W, SOURCE_H), GBitmapFormat8Bit);
   s_window = window_create();
   window_set_background_color(s_window, GColorBlack);
@@ -189,6 +206,10 @@ static void deinit(void) {
   tick_timer_service_unsubscribe();
   app_message_deregister_callbacks();
   if (s_text_bitmap) gbitmap_destroy(s_text_bitmap);
+  if (s_paper_font) fonts_unload_custom_font(s_paper_font);
+  if (s_amber_font) fonts_unload_custom_font(s_amber_font);
+  if (s_signal_font) fonts_unload_custom_font(s_signal_font);
+  if (s_quiet_font) fonts_unload_custom_font(s_quiet_font);
   if (s_face_layer) layer_destroy(s_face_layer);
   if (s_window) window_destroy(s_window);
 }

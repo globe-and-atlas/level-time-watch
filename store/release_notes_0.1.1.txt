@@ -1,0 +1,1 @@
+Every style now has a distinct numeral font: block Ink, serif Paper, mono Amber, bold Field, condensed Signal, and light Quiet. Signal's accent dot has more breathing room. Roll behavior and saved settings remain the same.

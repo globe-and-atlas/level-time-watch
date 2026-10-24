@@ -1,7 +1,7 @@
 {
   "name": "level-time-watch",
   "author": "Daniel Bally",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": ["pebble-app"],
   "private": true,
   "dependencies": {"@rebble/clay": "1.1.0"},
@@ -20,7 +20,12 @@
       "SETTING_DATE"
     ],
     "resources": {
-      "media": []
+      "media": [
+        {"type": "font", "name": "FONT_PAPER_46", "file": "fonts/DMSerifDisplay-Regular.ttf", "characterRegex": "[:0-9]"},
+        {"type": "font", "name": "FONT_AMBER_46", "file": "fonts/IBMPlexMono-SemiBold.ttf", "characterRegex": "[:0-9]"},
+        {"type": "font", "name": "FONT_SIGNAL_48", "file": "fonts/Rajdhani-Bold.ttf", "characterRegex": "[:0-9]"},
+        {"type": "font", "name": "FONT_QUIET_46", "file": "fonts/Lato-Light.ttf", "characterRegex": "[:0-9]"}
+      ]
     }
   }
 }

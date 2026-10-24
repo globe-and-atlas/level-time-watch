@@ -11,3 +11,5 @@ timestamp: "2026-10-24T16:15:00-05:00"
 5. Review the first frame and every motion frame for intact, readable digits before publishing. The first GIF frame is upright so the store poster is legible.
 
 The emulator verifies code and pixels, but does not measure physical-watch battery use or wrist readability.
+
+For a long-time layout probe, set the style first, then inject `23:58:58` for 24-hour or `12:58:58` for 12-hour mode with `pebble emu-set-time --emulator emery`. Wait until the next minute tick before capturing. In the 0.1.1 test setup, a subsequent style message refreshed the app's clock and replaced the injected time with local wall time. Restore the current time and original format after the probe.

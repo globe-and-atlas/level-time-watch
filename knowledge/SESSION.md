@@ -2,14 +2,18 @@
 
 ## Current Session
 
-**Goal:** Add theme coverage to the published Emery screenshot gallery while keeping the tilt GIF first.
+**Goal:** Correct the six styles so each uses distinct numeral typography, then publish version 0.1.1 with matching media.
 **Agent:** OpenAI Codex
 **Handoff-from:** OpenAI Codex
 **Handoff-type:** continuation
-**Status:** Complete — six themes represented in live gallery
+**Status:** Complete — version 0.1.1 published
 
 ## Checkpoints
 
+- 2026-10-24 17:08 — Reinstalled 0.1.1 after selecting Field and date format 1; the emulator still showed olive Field with a date, confirming persistence through watchface reinstall. Restored Ink/Off afterward.
+- 2026-10-24 17:07 — Published 0.1.1 to the existing Listed store page with refreshed media and typography copy. The public PBW SHA-256 matches the local release artifact; the public tilt and six-style GIF hashes match the local files. Dashboard shows 0.1.1 Published. A fresh read-only verifier passed the distinct fonts and 0.1.1 PBW. Physical-watch and real-phone checks remain open.
+- 2026-10-24 17:02 — Clean Pebble build succeeded with four licensed custom fonts (12,664 compiled resource bytes). Six native stills showed distinct numeral silhouettes. Host roll test passed. An isolated Paper `23:59` screenshot fit; a rapid multi-style injected-time probe stalled Emery QEMU after one capture. Graceful Emery-only restart restored the emulator; no physical device test was performed.
+- 2026-10-24 — User identified that five of six styles used the same LECO numeral font. Plan: preserve the six style IDs and UUID, add licensed custom font resources for Paper, Amber, Signal, and Quiet, retain distinct Pebble system fonts for Ink and Field, then rebuild/capture/review before publishing 0.1.1.
 - 2026-10-24 16:41 — The public listing HTML references the original tilt GIF in slot 1 and the new theme GIF in slot 2, followed by Paper, Amber, and Quiet. The public GIF asset downloaded successfully at 200 × 228, six frames, and 6,072 bytes, matching the local file size. The in-app browser retained the older client-side gallery cache during the check; the saved dashboard gallery and public HTML both show the new order.
 - 2026-10-24 16:39 — Created a six-frame 200 × 228 theme GIF from native PNG captures, with exact pixel matches and 1.5-second frames. The Developer Dashboard now stores it in slot 2 after the original tilt GIF, followed by Paper, Amber, and Quiet stills. The public app page still showed cached old media immediately after saving; recheck propagation before closing.
 - 2026-10-24 — User requested more theme screenshots. The official submission guide limits Emery to five 200 × 228 images. Plan: preserve the first tilt GIF; replace one gallery image with a native GIF that cycles all six themes, then verify the public order and animation.
@@ -25,7 +29,7 @@
 
 ## Handoff
 
-- **Completed:** native Emery watchface, Clay settings source, PBW, six native style screenshots, native tilt GIF, store listing, and independent preflight.
+- **Completed:** native Emery watchface, six distinct numeral styles, Clay settings source, 0.1.1 PBW, updated native media, store release, and independent preflight.
 - **Open device checks:** use a physical Pebble Time 2 to judge wrist readability, motion feel, and battery impact; exercise Clay Save on a real phone.
 - **Store note:** the public screenshot GIF remains animated, but the optional dashboard banner was converted to PNG and is not visible on the current public page.
 

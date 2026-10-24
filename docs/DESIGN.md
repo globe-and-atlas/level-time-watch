@@ -18,14 +18,14 @@ An accelerometer measures gravity relative to the watch. It can estimate roll wh
 
 | Value | Name | Palette and typography | Default supporting detail |
 | --- | --- | --- | --- |
-| 0 | Ink | White bold sans on black | Small gray date |
-| 1 | Paper | Charcoal sans on warm ivory | Small dark date |
-| 2 | Amber | Amber numerals on black | Small amber battery indicator |
-| 3 | Field | Off-white bold sans on dark olive | Small pale date |
-| 4 | Signal | White bold sans on black | Orange accent dot and date |
-| 5 | Quiet | Charcoal sans on light gray | Small gray date |
+| 0 | Ink | White block LECO numerals on black | Small gray date |
+| 1 | Paper | Charcoal DM Serif Display numerals on warm ivory | Small dark date |
+| 2 | Amber | Amber IBM Plex Mono numerals on black | Small amber battery indicator |
+| 3 | Field | Off-white bold Bitham numerals on dark olive | Small pale date |
+| 4 | Signal | White condensed Rajdhani numerals on black | Orange accent dot and date |
+| 5 | Quiet | Charcoal light Lato numerals on light gray | Small gray date |
 
-Ink is the first-launch default. The choice persists across watchface restarts. No blue is used in these six default styles. A style changes colors, type treatment, and supporting detail; it never changes the level-time motion rule. The Signal dot is a visual accent only and must not imply a notification or connection state.
+Ink is the first-launch default. The choice persists across watchface restarts. No blue is used in these six default styles. Each style changes the time's font as well as its colors and supporting detail; it never changes the level-time motion rule. The Signal dot is a visual accent only and must not imply a notification or connection state. The typography above supersedes the earlier visual renders where those renders reused similar numerals.
 
 Provide a date setting with Off, YYYY-MM-DD, MM/DD/YYYY, and DD/MM/YYYY choices, per this workspace's Pebble convention. The render shorthand `SAT 24` is illustrative; the native date should follow the selected setting. The watch's 12-hour or 24-hour preference controls time format. A battery indicator can be shown in Amber without requiring a phone connection.
 
